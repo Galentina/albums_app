@@ -1,18 +1,23 @@
 import React from 'react';
 
 
-export default function Album(props){
-    const {currentAlbum} = props;
 
-console.log(currentAlbum)
+export default function Album(props){
+    const {photo} = props;
+    const src = photo.thumbnailUrl;
+    const alt = photo.title;
+
+
+
+console.log(photo)
 
     return (
         <div>
                 <div className='photo' >
-                    <img alt='' /><br/>
+                    <img src={src} alt={alt} /><br/>
 
                 </div>
-            <p className='title'>{currentAlbum.title}</p>
+            <p className='title'>{photo.title}</p>
         </div>
     )
 }

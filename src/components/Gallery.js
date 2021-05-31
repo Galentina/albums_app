@@ -14,10 +14,14 @@ function Gallery(props){
         props.getFirstAlbum()
     }, [])
 
+    const goToAlbum = (num) => {
+        setNum(num);
+    }
+
     const nextAlbum = (n) => {
         switch(n){
-            case '+': {(num < props.allImages.length/10) ?
-                setNum(num + 1) : setNum(props.allImages.length/10);
+            case '+': {(num < 100) ?
+                setNum(num + 1) : setNum(100);
                 break;
             }
             case '-': {(num > 1) ? setNum(num-1) : setNum(1); break;}
@@ -25,10 +29,10 @@ function Gallery(props){
         }
     }
 
-    const showAlbums = props.allImages.filter(el=> el.userId===num);
+    const showAlbums = props.allImages.filter(el=> el.albumId===num);
 
 
-    const showPhotos = showAlbums.map(el=>  <Album key={el.id} currentAlbum={el}/>);
+    const showPhotos = showAlbums.map(el=>  <Album key={el.id} photo={el}/>);
 
     return (
         <div><div style={{display: "inline-flex", verticalAlign: "center", marginBottom: '30px'}}>
@@ -40,6 +44,8 @@ function Gallery(props){
             <div className='mainDiv'>
                 {showPhotos}
             </div>
+
+
         </div>
     )
 }

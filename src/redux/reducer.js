@@ -4,6 +4,7 @@ const initialState = {
 }
 
 const galleryApp = (state=initialState, action) => {
+
     switch (action.type) {
         case 'GET_ALL_ALBUMS': {
 

@@ -22,7 +22,7 @@
 
 
 input {
-    width: 200px;
+    width: 100px;
     height: 38px;
     border: 1px solid #818080;
     border-radius: 5px;
@@ -75,7 +75,7 @@ h1{
     border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 1px 1px 1px darkgray;
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin: 15px;
     background-image: url('items/Back.png');
     background-size: 100%;
