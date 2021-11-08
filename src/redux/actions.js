@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-export function getAlbum() {
 
+
+export const getAlbum = () => {
     return async dispatch => {
         try {
             const data = await axios.get(`https://jsonplaceholder.typicode.com/photos`)
@@ -10,15 +11,14 @@ export function getAlbum() {
                         type: 'GET_ALL_ALBUMS',
                         payload: data,
                     })
-
-        } catch(error) {console.log(error)}
+        } catch(error) { console.log(error); }
     }
-}
+};
 
-export function getAlbumByNumber(data){
+export const setNumber = (data) => {
 
     return {
-        type:    'GET_ALBUM',
+        type: 'SET_ALBUM',
         payload: data,
     };
 

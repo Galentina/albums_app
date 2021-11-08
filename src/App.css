@@ -10,6 +10,7 @@
 
 
 .nav {
+
     color: white;
     padding: 20px;
     margin: auto;
@@ -19,18 +20,50 @@
 
 }
 
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
 
+.footer {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.footer p{
+    margin: 0 50px;
+    color: white;
+}
+
+.albums-header {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
 
 input {
-    width: 100px;
-    height: 38px;
+    width: 70px;
+    height: 36px;
     border: 1px solid #818080;
     border-radius: 5px;
     outline: none;
+    margin: 0 10px;
+    font-size: 18px;
+    vertical-align: -1px;
   }
 
 .button {
-  width: 80px;
+  min-width: 80px;
   height: 40px;
   border: 1px solid #1db060;
   border-radius: 5px;
@@ -38,7 +71,7 @@ input {
   background-color: #1db060;
   vertical-align: middle;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   outline: none;
     font-size: 16px;
 }
@@ -57,18 +90,60 @@ h1{
 }
 
 .mainDiv {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
     margin: auto;
     padding: 5px;
     box-shadow: 1px 1px 1px darkgray;
     border: 1px solid #b7f4fc;
-    align-content: center;
     text-align: center;
 }
 
-
+.spacePhoto{
+    width: 170px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #b7f4fc;
+}
+.item{
+    position: relative;
+    width: 100%;
+    margin: -35px 0 10px 0;
+    background-color: #ffffff70;
+    z-index: 999;
+    line-height: normal;
+    padding: 10px 0;
+    color: #b7b7b7;
+    font-size: 10px;
+}
+.item::before{
+    content: "XTR\00a0";
+    color: red;
+    text-transform:uppercase;
+}
+.titleBox{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.albumTitle{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0;
+    color: #b7b7b7;
+    font-size: 15px;
+}
+.albumTitle::before{
+    content: "XTR\00a0";
+    color: red;
+    text-transform:uppercase;
+}
 .photo{
     width: 150px;
     height: 150px;
